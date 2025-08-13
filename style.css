@@ -152,12 +152,12 @@ body {
         box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
     }
 
-    .skill img {
-        width: 60px;
-        height: 60px;
-        object-fit: contain;
-        margin-bottom: 0.5rem;
-    }
+   #skills img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
 
     .skill p {
         margin: 0;
@@ -359,3 +359,4 @@ footer {
     position: relative;
     z-index: 1;
 }
+
