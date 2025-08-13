@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Enzo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ====== Bouton Mode Clair/Sombre ====== -->
+    <label class="theme-toggle">
+        <input type="checkbox" id="themeSwitch">
+        <span></span>
+    </label>
+    <!-- Icônes flottantes -->
+    <div class="background-icons">
+        <i class="fas fa-gamepad"></i>
+        <i class="fas fa-laptop-code"></i>
+        <i class="fas fa-paint-brush"></i>
+        <i class="fas fa-music"></i>
+        <i class="fas fa-robot"></i>
+    </div>
+
+
+    <!-- En-tête -->
+    <header>
+        <h1>Enzo Bidet portfolio</h1>
+        <p>Créatif, gamer et développeur en herbe</p>
+    </header>
+
+    <!-- Menu -->
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Section À propos -->
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>
+            Bonjour, je m'appelle <strong>Enzo</strong>, j'ai 14 ans (bientôt 15) et je vis à Aire-sur-l'Adour, en France.
+            J'adore jouer aux jeux vidéo et apprendre à en créer grâce au code.
+            Je suis passionné par les jeux de tous genres et fier d'avoir réalisé le projet <strong>Platformer 2D</strong>.
+            J'aime aussi coder plein d'autres choses, pas seulement des jeux, et surtout je fais ça par passion.
+            Mon but est d'apprendre le plus de choses possible, pour pouvoir dire que j'ai exploré un maximum de domaines.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Mes Compétences</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/888/888859.png" alt="Unity">
+                <p>Unity</p>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/5969/5969183.png" alt="Blender">
+                <p>Blender</p>
+            </div>
+            <div class="skill">
+                <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Visual Studio">
+                <p>Visual Studio</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section Projets -->
+    <section id="projets">
+        <div class="project">
+            <img src="chaine-youtube.png" alt="Chaîne YouTube">
+            <h3><i class="fab fa-youtube"></i> Ma chaîne YouTube</h3>
+            <p>Découvrez mes vidéos et mes créations.</p>
+            <a class="btn" href="https://www.youtube.com/@gloomow1" target="_blank">Voir la chaîne</a>
+        </div>
+
+        <div class="project">
+            <img src="jeu-concours.png" alt="Jeu Concours">
+            <h3><i class="fas fa-gamepad"></i> Jeu Concours</h3>
+            <p>Ce jeu a été réalisé pendant une game jam (concours de création de jeux).</p>
+            <a class="btn" href="https://solarman6666.itch.io/404-exit-not-found" target="_blank">Jouer</a>
+        </div>
+
+        <div class="project">
+            <img src="platformer2d.png" alt="Jeu Platformer 2D">
+            <h3><i class="fas fa-laptop-code"></i> Jeu Platformer 2D</h3>
+            <p>Un petit jeu que j'ai développé moi-même.</p>
+            <a class="btn" href="https://jinshi4624.itch.io/platformer-2d" target="_blank">Télécharger</a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="glass">
+        <h2>Me contacter</h2>
+        <p>Email : <a href="mailto:contactenzo3@gmail.com">contactenzo3@gmail.com</a></p>
+        <p>Discord : gloomow1</p>
+    </section>
+
+    <!-- ====== Footer ====== -->
+    <footer>
+        <p>&copy; 2025 - Mon Portfolio</p>
+    </footer>
+
+    <!-- JS pour mode clair/sombre -->
+    <script>
+        const themeSwitch = document.getElementById('themeSwitch');
+        themeSwitch.addEventListener('change', () => {
+            document.body.classList.toggle('light', themeSwitch.checked);
+        });
+    </script>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2025 Enzo - Portfolio</p>
+    </footer>
+
+    <!-- Script pour l'animation au scroll -->
+    <script>
+        const elements = document.querySelectorAll('.project');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        elements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
