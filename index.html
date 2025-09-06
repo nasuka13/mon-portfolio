@@ -23,7 +23,8 @@
         <i class="fas fa-music"></i>
         <i class="fas fa-robot"></i>
     </div>
-
+    <!-- Bouton retour en haut -->
+    <button id="scrollTopBtn" title="Remonter en haut">⬆</button>
 
     <!-- En-tête -->
     <header>
@@ -37,6 +38,24 @@
         <a href="#projets">Projets</a>
         <a href="#contact">Contact</a>
     </nav>
+    <script>
+        // Récupérer le bouton
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+        // Afficher le bouton après avoir descendu 200px
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Au clic, scroll en haut en douceur
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 
     <!-- Section À propos -->
     <section id="about">
@@ -50,24 +69,32 @@
         </p>
     </section>
 
+    <!-- ====== Compétences améliorées ====== -->
     <section id="skills">
         <h2>Mes Compétences</h2>
         <div class="skills-container">
             <div class="skill">
-                <img src="https://cdn-icons-png.flaticon.com/512/888/888859.png" alt="Unity">
                 <p>Unity</p>
+                <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
             </div>
             <div class="skill">
-                <img src="https://cdn-icons-png.flaticon.com/512/5969/5969183.png" alt="Blender">
                 <p>Blender</p>
+                <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
             </div>
             <div class="skill">
-                <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Visual Studio">
                 <p>Visual Studio</p>
+                <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+            </div>
+            <div class="skill">
+                <p>Créativité</p>
+                <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill">
+                <p>Logique / Résolution de problèmes</p>
+                <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
             </div>
         </div>
     </section>
-
 
     <!-- Section Projets -->
     <section id="projets">
@@ -90,6 +117,40 @@
             <h3><i class="fas fa-laptop-code"></i> Jeu Platformer 2D</h3>
             <p>Un petit jeu que j'ai développé moi-même.</p>
             <a class="btn" href="https://jinshi4624.itch.io/platformer-2d" target="_blank">Télécharger</a>
+        </div>
+    </section>
+
+    <section id="cv">
+        <h2>Mon CV</h2>
+        <div class="cv-container glass">
+            <h3>Enzo Bidet</h3>
+            <p>14 ans (bientôt 15) - Aire-sur-l'Adour, France</p>
+
+            <h4>Objectif</h4>
+            <p>Apprendre et développer mes compétences en programmation, jeux vidéo et création digitale.</p>
+
+            <h4>Compétences</h4>
+            <ul>
+                <li>Programmation : C#, Python, HTML/CSS/JS</li>
+                <li>Création de jeux : Unity, Blender</li>
+                <li>Design & graphisme : Photoshop, Illustrator (bases)</li>
+            </ul>
+
+            <h4>Projets réalisés</h4>
+            <ul>
+                <li>Platformer 2D - jeu vidéo développé par moi-même</li>
+                <li>Jeu Concours - game jam</li>
+                <li>Chaîne YouTube - partage de mes créations et tutoriels</li>
+            </ul>
+
+            <h4>Formations</h4>
+            <ul>
+                <li>Auto-apprentissage en programmation & Unity</li>
+                <li>Participation à des game jams</li>
+            </ul>
+
+            <h4>Centres d’intérêt</h4>
+            <p>Jeux vidéo, création digitale, musique, technologie et coding.</p>
         </div>
     </section>
 
