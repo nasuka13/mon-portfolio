@@ -1,4 +1,4 @@
-/* ====== Style général ====== */
+/* ====== Style gÃ©nÃ©ral ====== */
 body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
     margin: 0;
@@ -15,6 +15,33 @@ body {
         background: linear-gradient(135deg, #f5f5f5, #ddd);
         color: #111;
     }
+        body.light header,
+        body.light nav,
+        body.light section,
+        body.light #contact,
+        body.light .project,
+        body.light .skill,
+        body.light #cv {
+            background-color: rgba(255, 255, 255, 0.9); /* fond clair */
+            color: #111; /* texte noir */
+        }
+
+        body.light a {
+            color: #111; /* liens noirs */
+        }
+
+            body.light a.btn {
+                color: #000; /* texte des boutons */
+                background: linear-gradient(45deg, #ffcc00, #ffe066); /* boutons clairs */
+            }
+
+        body.light #about p,
+        body.light #skills p,
+        body.light #cv p,
+        body.light #cv li,
+        body.light .project p {
+            color: #111; /* texte principal noir */
+        }
 
         body.light nav, body.light #contact, body.light .project {
             background-color: rgba(255, 255, 255, 0.9);
@@ -23,7 +50,6 @@ body {
         body.light header {
             background: linear-gradient(to right, #ffe066, #ffcc00);
         }
-
 /* ====== Bouton mode clair/sombre ====== */
 .theme-toggle {
     position: fixed;
@@ -55,7 +81,7 @@ body {
         background: #f5f5f5;
     }
 
-/* ====== Animation à l'apparition ====== */
+/* ====== Animation Ã  l'apparition ====== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -68,7 +94,7 @@ body {
     }
 }
 
-/* ====== Icônes flottantes ====== */
+/* ====== IcÃ´nes flottantes ====== */
 .background-icons {
     position: fixed;
     top: 0;
@@ -109,12 +135,12 @@ body {
 .glass {
     background: rgba(255, 255, 255, 0.05); /* Transparent */
     border-radius: 15px; /* Coins arrondis */
-    backdrop-filter: blur(8px); /* Flou derrière */
-    -webkit-backdrop-filter: blur(8px); /* Compatibilité Safari */
+    backdrop-filter: blur(8px); /* Flou derriÃ¨re */
+    -webkit-backdrop-filter: blur(8px); /* CompatibilitÃ© Safari */
     border: 1px solid rgba(255, 255, 255, 0.2); /* Lignes subtiles */
 }
 
-/* ====== Section Compétences ====== */
+/* ====== Section CompÃ©tences ====== */
 #skills {
     margin: 3rem auto;
     padding: 2rem;
@@ -166,7 +192,7 @@ body {
     }
 
 
-/* ====== En-tête ====== */
+/* ====== En-tÃªte ====== */
 header {
     background: linear-gradient(to right, #ff7b00, #ffcc00);
     text-align: center;
@@ -223,7 +249,7 @@ section {
 }
 
 
-/* ====== Section À propos ====== */
+/* ====== Section Ã€ propos ====== */
 #about {
     max-width: 900px;
     margin: 3rem auto;
@@ -331,7 +357,7 @@ section {
     text-align: center;
 }
 
-    /* ====== Contact animé ====== */
+    /* ====== Contact animÃ© ====== */
     #contact:hover {
         transform: scale(1.02);
         box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
@@ -359,3 +385,152 @@ footer {
     position: relative;
     z-index: 1;
 }
+#cv {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border: 2px solid #ffcc00;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+    background: rgba(31, 31, 31, 0.9);
+    animation: fadeInUp 1s ease;
+}
+
+    #cv h2 {
+        text-align: center;
+        color: #ffcc00;
+        margin-bottom: 1rem;
+    }
+
+    #cv h3 {
+        color: #ffcc00;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #cv h4 {
+        color: #ff9900;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #cv p, #cv li {
+        color: #f5f5f5;
+        line-height: 1.6;
+    }
+
+    #cv ul {
+        list-style: disc;
+        margin-left: 1.5rem;
+    }
+
+    #cv a.btn {
+        display: inline-block;
+        margin-top: 1rem;
+    }
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    background: linear-gradient(45deg, #ff9900, #ffcc00);
+    color: #000;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(255,204,0,0.5);
+    display: none; /* cachÃ© par dÃ©faut */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+    #scrollTopBtn:hover {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+/* ====== Barres de progression ====== */
+.progress-bar {
+    background: rgba(255,204,0,0.2);
+    border-radius: 10px;
+    height: 12px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.progress {
+    height: 12px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ff9900, #ffcc00);
+}
+
+/* ====== Timeline CV ====== */
+.timeline {
+    list-style: none;
+    padding-left: 0;
+}
+
+    .timeline li {
+        padding: 10px 0;
+        border-left: 3px solid #ffcc00;
+        margin-left: 10px;
+        position: relative;
+    }
+
+        .timeline li::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            background: #ff9900;
+            border-radius: 50%;
+        }
+
+/* ====== CV container ====== */
+#cv {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border: 2px solid #ffcc00;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+    background: rgba(31, 31, 31, 0.9);
+    animation: fadeInUp 1s ease;
+}
+
+    #cv h2 {
+        text-align: center;
+        color: #ffcc00;
+        margin-bottom: 1rem;
+    }
+
+    #cv h3 {
+        color: #ffcc00;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #cv h4 {
+        color: #ff9900;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #cv p, #cv li {
+        color: #f5f5f5;
+        line-height: 1.6;
+    }
+
+    #cv ul {
+        list-style: disc;
+        margin-left: 1.5rem;
+    }
+
+    #cv a.btn {
+        display: inline-block;
+        margin-top: 1rem;
+    }
