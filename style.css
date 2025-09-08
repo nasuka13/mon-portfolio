@@ -363,7 +363,6 @@ section {
         box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
         transition: all 0.3s ease;
     }
-
 /* ====== Footer ====== */
 footer {
     text-align: center;
@@ -372,6 +371,24 @@ footer {
     color: #888;
     font-size: 0.9rem;
     border-top: 2px solid #ffcc00;
+    position: relative;
+    z-index: 1;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .credits {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
 }
 
 /* ====== Pied de page ====== */
@@ -534,3 +551,4 @@ footer {
         display: inline-block;
         margin-top: 1rem;
     }
+
